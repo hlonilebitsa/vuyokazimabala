@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>It's A Date ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 25px 10px;
+            background: linear-gradient(
+                135deg,
+                #fff9cf,
+                #fff1a8,
+                #fff8d6
+            );
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Romantic message above the heart */
+        .romantic-message {
+            font-family: 'Great Vibes', cursive;
+            color: #a66b31;
+            font-size: clamp(30px, 6vw, 52px);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        /* EXACT ORIGINAL INDEX HEART LAYOUT */
+        .heart-container {
+            position: relative;
+            width: min(90vw, 430px);
+            aspect-ratio: 1 / 0.95;
+
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+
+            gap: 6px;
+            transform: rotate(-2deg);
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo img:hover {
+            transform: scale(1.08);
+        }
+
+        /* EXACT ORIGINAL PICTURE POSITIONS */
+
+        /* Row 1 */
+        .p1  { grid-area: 1 / 2; }
+        .p2  { grid-area: 1 / 3; }
+        .p3  { grid-area: 1 / 5; }
+        .p4  { grid-area: 1 / 6; }
+
+        /* Row 2 */
+        .p5  { grid-area: 2 / 1; }
+        .p6  { grid-area: 2 / 2; }
+        .p7  { grid-area: 2 / 3; }
+        .p8  { grid-area: 2 / 5; }
+        .p9  { grid-area: 2 / 6; }
+        .p10 { grid-area: 2 / 7; }
+
+        /* Row 3 */
+        .p11 { grid-area: 3 / 1; }
+        .p12 { grid-area: 3 / 2; }
+        .p13 { grid-area: 3 / 6; }
+        .p14 { grid-area: 3 / 7; }
+
+        /* Row 4 */
+        .p15 { grid-area: 4 / 2; }
+        .p16 { grid-area: 4 / 3; }
+        .p17 { grid-area: 4 / 5; }
+        .p18 { grid-area: 4 / 6; }
+
+        /* Row 5 */
+        .p19 { grid-area: 5 / 3; }
+        .p20 { grid-area: 5 / 4; }
+        .p21 { grid-area: 5 / 5; }
+
+        /* Row 6 */
+        .p22 { grid-area: 6 / 4; }
+
+        /* Reference box in the centre */
+        .reference-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(2deg);
+
+            background: #ffffff;
+            padding: 12px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .reference-box h2 {
+            color: #222222;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(13px, 3vw, 20px);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .heart-container {
+                width: 94vw;
+                gap: 4px;
+            }
+
+            .romantic-message {
+                font-size: 35px;
+                margin-bottom: 18px;
+            }
+
+            .reference-box {
+                padding: 10px 14px;
+            }
+
+            .reference-box h2 {
+                font-size: clamp(11px, 3vw, 16px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <h1 class="romantic-message">
+            It's a date, send me the ref.
+        </h1>
+
+        <div class="heart-container">
+
+            <!-- Row 1 -->
+            <div class="photo p1">
+                <img src="images/vuyo1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="photo p2">
+                <img src="images/vuyo2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="photo p3">
+                <img src="images/vuyo3.jpg" alt="Memory 3">
+            </div>
+
+            <div class="photo p4">
+                <img src="images/vuyo4.jpg" alt="Memory 4">
+            </div>
+
+            <!-- Row 2 -->
+            <div class="photo p5">
+                <img src="images/vuyo5.jpg" alt="Memory 5">
+            </div>
+
+            <div class="photo p6">
+                <img src="images/vuyo6.jpg" alt="Memory 6">
+            </div>
+
+            <div class="photo p7">
+                <img src="images/vuyo7.jpg" alt="Memory 7">
+            </div>
+
+            <div class="photo p8">
+                <img src="images/vuyo8.jpg" alt="Memory 8">
+            </div>
+
+            <div class="photo p9">
+                <img src="images/vuyo9.jpg" alt="Memory 9">
+            </div>
+
+            <div class="photo p10">
+                <img src="images/vuyo10.jpg" alt="Memory 10">
+            </div>
+
+            <!-- Row 3 -->
+            <div class="photo p11">
+                <img src="images/vuyo11.jpg" alt="Memory 11">
+            </div>
+
+            <div class="photo p12">
+                <img src="images/vuyo12.jpg" alt="Memory 12">
+            </div>
+
+            <div class="photo p13">
+                <img src="images/vuyo13.jpg" alt="Memory 13">
+            </div>
+
+            <div class="photo p14">
+                <img src="images/vuyo14.jpg" alt="Memory 14">
+            </div>
+
+            <!-- Row 4 -->
+            <div class="photo p15">
+                <img src="images/vuyo15.jpg" alt="Memory 15">
+            </div>
+
+            <div class="photo p16">
+                <img src="images/vuyo16.jpg" alt="Memory 16">
+            </div>
+
+            <div class="photo p17">
+                <img src="images/vuyo17.jpg" alt="Memory 17">
+            </div>
+
+            <div class="photo p18">
+                <img src="images/vuyo18.jpg" alt="Memory 18">
+            </div>
+
+            <!-- Row 5 -->
+            <div class="photo p19">
+                <img src="images/vuyo19.jpg" alt="Memory 19">
+            </div>
+
+            <div class="photo p20">
+                <img src="images/vuyo20.jpg" alt="Memory 20">
+            </div>
+
+            <div class="photo p21">
+                <img src="images/vuyo21.jpg" alt="Memory 21">
+            </div>
+
+            <!-- Row 6 -->
+            <div class="photo p22">
+                <img src="images/vuyo22.jpg" alt="Memory 22">
+            </div>
+
+            <!-- Centre reference -->
+            <div class="reference-box">
+                <h2>REF: GREENAPPLES 🍏</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

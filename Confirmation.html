@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Little Question ❤️</title>
+
+    <!-- Cute Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffe4ec, #ffd1df, #fff0f5);
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            animation: appear 1.2s ease;
+        }
+
+        h1 {
+            color: #c04478;
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(32px, 7vw, 58px);
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 35px;
+            text-shadow: 2px 3px 5px rgba(192, 68, 120, 0.12);
+        }
+
+        .confirm-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 38px;
+            background: #ed79a4;
+            color: white;
+            text-decoration: none;
+            font-family: 'Pacifico', cursive;
+            font-size: 21px;
+            font-weight: 400;
+            border-radius: 50px;
+            box-shadow: 0 7px 20px rgba(192, 68, 120, 0.22);
+            transition: all 0.3s ease;
+        }
+
+        .confirm-button:hover {
+            background: #d9578a;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(192, 68, 120, 0.3);
+        }
+
+        .arrow {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(219, 91, 139, 0.35);
+            font-size: 24px;
+            animation: floatUp linear infinite;
+            pointer-events: none;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-duration: 9s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+            font-size: 32px;
+        }
+
+        .heart:nth-child(3) {
+            left: 70%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(4) {
+            left: 90%;
+            animation-duration: 13s;
+            animation-delay: 3s;
+            font-size: 30px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .confirm-button {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+
+    <div class="container">
+
+        <h1>Are we set, Big Head?</h1>
+
+        <a href="Final.html" class="confirm-button">
+            Confirm <span class="arrow">→</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
